@@ -118,9 +118,9 @@ bool MainWindow::validNumber(int *board, int row, int col, int num)
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
 {
-    QPixmap openpix(QCoreApplication::applicationDirPath() + "open.png");
-    QPixmap solvepix(QCoreApplication::applicationDirPath() + "solve.png");
-    QPixmap quitpix(QCoreApplication::applicationDirPath() + "quit.png");
+    QPixmap openpix(QDir::currentPath() + "/open.png");
+    QPixmap solvepix(QDir::currentPath() + "/solve.png");
+    QPixmap quitpix(QDir::currentPath() + "/quit.png");
 
     auto *open = new QAction(openpix, "&Open", this);
     auto *solve = new QAction(solvepix, "&Solve", this);
